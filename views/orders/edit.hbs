@@ -1,0 +1,30 @@
+<div class="container-fluid d-flex justify-content-center aling-items-center vh-100">
+  <form action="/orders/edit/{{order._id}}" method="POST">
+    <p>ФИО: {{order.client.lastname}} {{order.client.name}} {{order.client.middlename}}</p>
+    <div class="mb-3">
+      <input placeholder="Название заказа" type="text" name="title" value="{{order.title}}" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Адрес доставки" type="text" name="deliveryadress" value="{{order.deliveryadress}}" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Дата доставки" type="date" name="deliverydate" value="{{order.deliverydate}}" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Дата сборки" type="date" name="assemblydate" value="{{order.assemblydate}}" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Стоимость заказа" type="number" name="orderprice" value="{{order.orderprice}}" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Оплачено" type="number" name="payment" value="{{order.payment}}" class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Стоимость доставки" type="number" name="deliveryprice" value="{{order.deliveryprice}}" required class="form-control">
+    </div>
+     <div class="mb-3">
+      <input placeholder="Стоимость сборки" type="number" name="assemblyprice" value="{{order.assemblyprice}}" required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</div>

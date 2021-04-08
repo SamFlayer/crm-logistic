@@ -1,0 +1,33 @@
+<h2>Новый заказ для клиента: {{client.lastname}} {{client.name}} {{client.middlename}}</h2>
+<div class="container-fluid d-flex justify-content-center aling-items-center vh-100">
+  <form name="addNewOrderForClient" action="/orders/new" method="POST">
+    <div class="mb-3">
+      <input placeholder="Название заказа" type="text" name="title" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input style="display:none" type="text" name="client" value="{{client._id}}" class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Адрес доставки" type="text" name="deliveryadress" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Дата доставки" type="date" name="deliverydate" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Дата сборки" type="date" name="assemblydate" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Стоимость заказа" type="number" name="orderprice" required class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Оплачено" type="number" name="payment" class="form-control">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Стоимость доставки" type="number" name="deliveryprice" required class="form-control">
+    </div>
+     <div class="mb-3">
+      <input placeholder="Стоимость сборки" type="number" name="assemblyprice" required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</div>

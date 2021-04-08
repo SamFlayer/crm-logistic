@@ -1,0 +1,23 @@
+<main class="container center">
+  Добавление клиента
+</main>
+<div class="container-fluid d-flex justify-content-center aling-items-center vh-100 mt-3">
+  <form id="registerForm" action="/clients/new" method="POST">
+    <div class="mb-3">
+      <input placeholder="Имя" type="text" name="name" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Отчество" type="text" name="middlename" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Фамилия" type="text" name="lastname" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Телефон" type="text" name="phone" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Email адрес" type="email" name="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</div>

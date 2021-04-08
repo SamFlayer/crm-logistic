@@ -1,0 +1,82 @@
+button.btn-client {
+  border: 1px solid black;
+  margin-left: 4px;
+}
+
+button.btn-client:hover {
+  color: white;
+  background-color:#0d6efd;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.d-flex {
+  display: flex!important;
+  justify-content: space-between;
+}
+
+.d-flex.col-sm {
+  display: flex!important;
+  justify-content: center;
+}
+
+.d-flex.search {
+  justify-content: center;
+}
+
+.rounded-pill {
+  border-radius: 4px!important;
+}
+
+a.firstedit {
+  margin-right: 1rem;
+}
+
+.btn-primary {
+  width: -webkit-fill-available;
+}
+
+.edit {
+  width: max-content;
+  height: max-content;
+  margin-right: 1rem;
+}
+
+.edit.editStatus {
+  width: 9rem;
+  margin-right: 1rem;
+}
+
+.form-floating>.form-control, .form-floating>.form-select {
+  height: 2.4rem;
+  padding: 0;
+  padding-left: 0.5rem;
+}
+
+
+ol.listOfComment {
+  min-height: 129px;
+}
+
+@media (min-width: 769px) {
+  input.form-control.client {
+    width: 150%;
+  }
+}
+
+@media (max-width: 991px) {
+  ol.listOfComment {
+    min-height: 138px!important;
+  }
+}
+
+@media (max-width: 849px) {
+  ol.listOfComment {
+    min-height: 173px!important;
+  }
+}

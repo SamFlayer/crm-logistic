@@ -1,0 +1,24 @@
+<div class="container w-5">
+  <div class="container d-flex">
+    <form name="findClients" class="form-floating align-items-center">
+      <div class="row g-3">
+        <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label m-4 mx-0">Поиск</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="name" class="search form-control client m-4 mx-2" aria-describedby="passwordHelpInline">
+        </div>
+      </div>
+    </form>
+    <a style="text-decoration:none; color: black;" href="/clients/new"><button type="button" class="btn btn-light btn-client m-4">Добавить клиента</button></a>
+  </div>
+
+  <ul class="list-group">
+    {{#each clients}}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <a href="/clients/{{this._id}}" style="text-decoration: none;">{{this.lastname}} {{this.name}} {{this.middlename}}</a>
+      <span class="badge bg-primary rounded-pill">{{this.orders.length}}</span>
+    </li>
+    {{/each}}
+  </ul>
+</div>

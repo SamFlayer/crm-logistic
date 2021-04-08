@@ -1,0 +1,23 @@
+<main class="container center">
+  Редактирование клиента 
+</main>
+<div class="container-fluid d-flex justify-content-center aling-items-center vh-100">
+  <form data-editForm id="registerForm" action="/clients/edit/{{client._id}}" method="POST">
+    <div class="mb-3">
+      <input placeholder="Имя" type="text" name="name" value="{{client.name}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Отчество" type="text" name="middlename" value="{{client.middlename}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Фамилия" type="text" name="lastname" value="{{client.lastname}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Телефон" type="text" name="phone" value="{{client.phone}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Email адрес" type="email" name="email" value="{{client.email}}" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <button  type="submit" class="btn btn-primary">Добавить</button>
+  </form>
+</div>

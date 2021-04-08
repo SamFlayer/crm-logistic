@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm mt-3">
+      <h2>Информация о заказе:</h2>
+
+      {{#if admin}}
+      <div>
+        <a class="firstedit" href="/orders/edit/{{order._id}}" style="text-decoration: none;">Редактировать</a>
+        <a href="/orders/delete/{{order._id}}" style="color: #dc3545; text-decoration: none;">Удалить заказ</a>
+      </div>
+      {{else}}
+      <div>
+        <a href="/orders/edit/{{order._id}}">Редактировать</a>
+      </div>
+      {{/if}}
+      <div style="margin-bottom: 20px; margin-top: 20px">
+        <form name='changeStatus' data-id='{{order._id}}' class="form-floating d-flex">
+          <select name='statusSelect' class="form-select edit editStatus" id="floatingSelect" aria-label="Floating label select example">
+            <option value="в работе">в работе</option>
+            <option value="в рекламации">в рекламации</option>
+            <option value="закончен">закончен</option>
+          </select>
+          <button type="submit" class="btn btn-primary edit">Изменить статус</button>
+        </form>
+      </div>
+
+      <div id='status'>
+        Текущий статус: {{order.status}}
+      </div>
+      <div>
+        Номер заказа: {{order.number}}
+      </div>
+      <div>
+        Название: {{order.title}}
+      </div>
+      <div>
+        Клиент: <a href="/clients/{{order.client._id}}">{{order.client.lastname}} {{order.client.name}}
+          {{order.client.middlename}} </a>
+      </div>
+      <div>
+        Адрес доставки: {{order.deliveryadress}}
+      </div>
+      <div>
+        Дата доставки: {{order.deliverydate}}
+      </div>
+      <div>
+        Дата сборки: {{order.assemblydate}}
+      </div>
+      <div>
+        Сумма заказа: {{order.orderprice}}
+      </div>
+      <div>
+        Оплачено: {{order.payment}}
+      </div>
+      <div>
+        Стоимость доставки: {{order.deliveryprice}}
+      </div>
+      <div>
+        Стоимость сборки: {{order.assemblyprice}}
+      </div>
+
+    </div>
+
+    <div class="col-sm mt-3">
+      <h2>Комментарии к заказу:</h2>
+
+      <ol class="listOfComment" style="min-height: 247px;">
+        {{#each order.comments}}
+        <li>
+          <div>
+            {{#if ../admin}}
+            admin: {{this.text}}
+            {{else}}
+            {{this.manager.lastname}} {{this.manager.name}} {{this.manager.middlename}}: {{this.text}}
+            {{/if}}
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+      <form name="addCommentOrder" data-id='{{order._id}}' method="POST">
+        <div class="mb-3">
+          <label for="texOfComment" class="form-label">Новый комментарий:</label>
+          <textarea name="texOfComment" class="form-control" aria-describedby="emailHelp" required="true"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Оставить комментарий</button>
+      </form>
+    </div>
+  </div>
+</div>
