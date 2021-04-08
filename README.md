@@ -9,5 +9,5 @@
 ## Pure JS
 ## HBS шаблонизатор
 ## Express
-## MongoDV Atlas
+## MongoDB Atlas
 ## Heroku
