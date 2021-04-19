@@ -6,8 +6,8 @@
 Чтобы войти на сайт в форме входа необходимо ввести email - q@q и пароль - 1
 
 # Технологии
-## Pure JS
-## HBS шаблонизатор
-## Express
-## MongoDB Atlas
-## Heroku
+### Pure JS
+### HBS шаблонизатор
+### Express
+### MongoDB Atlas
+### Heroku
